@@ -8,9 +8,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
 import com.example.sitconGua.button.AED
+import com.example.sitconGua.components.CurrentLocationScreen
 import com.example.sitconGua.ui.theme.ButtonModifier
 import com.example.sitconGua.ui.theme.MyApplicationTheme
-import com.example.sitconGua.utils.CurrentLocationScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
