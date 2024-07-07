@@ -1,5 +1,7 @@
 package com.example.sitconGua
 
+import com.example.sitconGua.utils.httpClient
+import kotlinx.coroutines.runBlocking
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -12,6 +14,11 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        val client = httpClient
+        runBlocking {
+            val res = client.getAEDList(mapOf("lat" to "25.126631", "lng" to "121.466292", "limit" to "10"))
+            println(res)
+        }
+
     }
 }

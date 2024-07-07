@@ -10,16 +10,16 @@ import io.ktor.client.request.*
 import io.ktor.serialization.kotlinx.json.*
 
 object httpClient {
-    private const val BASE_URL = "https://api.wavjaby.nckuctf.org/api/v0/"
+    private const val BASE_URL = "http://192.168.169.159:8088/api/v1/dashboard/nearbyAED"
     private val client: HttpClient = HttpClient(CIO) {
         install(ContentNegotiation) {
             json()
         }
     }
 
-    suspend fun getAEDList(path: String, params: Map<String, String>): AEDList {
+    suspend fun getAEDList(params: Map<String, String>): AEDList {
         client.use { client ->
-            val res = client.get(BASE_URL + path) {
+            val res = client.get(BASE_URL) {
                 url {
                     params.forEach { (key, value) -> parameters.append(key, value) }
                 }
