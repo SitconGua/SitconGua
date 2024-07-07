@@ -5,4 +5,4 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
-val ButtonModifier = Modifier.padding(24.dp).fillMaxWidth()
+val ButtonModifier = Modifier.padding(48.dp).fillMaxWidth()

@@ -129,6 +129,7 @@ class MainActivity : ComponentActivity() {
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+
                 urlsAndInfos.forEachIndexed { index, (url, info) ->
                     Text(text = info, modifier = Modifier.clickable {
                         openUrl(url)
