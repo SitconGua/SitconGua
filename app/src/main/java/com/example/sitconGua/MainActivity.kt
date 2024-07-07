@@ -9,7 +9,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.*
+import androidx.compose.ui.res.painterResource
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.sitconGua.components.MainScreen
@@ -28,7 +31,7 @@ class MainActivity : ComponentActivity() {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
         setContent {
-            MyApplicationTheme(darkTheme = true, dynamicColor = false) {
+            MyApplicationTheme(darkTheme = true) {
                 var showSecondScreen by remember { mutableStateOf(false) }
                 var latitude by remember { mutableDoubleStateOf(0.0) }
                 var longitude by remember { mutableDoubleStateOf(0.0) }
@@ -46,6 +49,7 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                     )
+
                 }
             }
         }
